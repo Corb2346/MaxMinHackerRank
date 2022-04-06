@@ -1,0 +1,28 @@
+function miniMaxSum(arr) { // recibe arreglo
+    // Write your code here
+
+let tomaDato = 0; //declarar variables
+let resultado=0;
+let indice =0;
+let arregloMaxMin = new Array();
+    
+    for(let i=0;i<arr.length;i++){ // funcion que suma todos los elementos del arreglo
+        tomaDato = arr[i];
+        resultado = resultado + tomaDato; 
+        indice=i;
+        /*console.log(tomaDato);
+        console.log(resultado);*/
+       
+    }
+    for(let i = 0;i<arr.length;i++){ // funcion que resta el primer elemento y lo guarda para tener max y min
+        arregloMaxMin[i] = resultado - arr[i];
+    }
+   /* console.log(resultado);
+    console.log(arregloMaxMin);*/
+   let min = Math.min.apply(null,arregloMaxMin); // variable que tiene minimo
+  /* console.log(min);*/
+   let max = Math.max.apply(null,arregloMaxMin); //variable que tiene maximo
+   /*console.log(max);*/
+   
+   
+console.log(min+" "+max); //imprimer resultados serapados por un espacio
